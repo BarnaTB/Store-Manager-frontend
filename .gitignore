@@ -1,0 +1,10 @@
+### Directories
+/node_modules
+coverage
+
+### Files
+package-lock.json
+yarn.lock
+.DS_Store
+dist/bundle.js
+yarn-error.log

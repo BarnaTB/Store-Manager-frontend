@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-const title = 'My Store Manager App';
+import { Provider } from 'react-redux';
+import Routes from './routes/routes';
 
 ReactDOM.render(
-  <div>{title}</div>,
-  document.getElementById('app')
+  <div>
+    <Routes/>
+  </div>,
+  document.getElementById('app'),
 );
 
 module.hot.accept();
