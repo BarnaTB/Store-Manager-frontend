@@ -1,10 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-const title = 'My Store Manager App';
+import SignUp from './components/Signup/signup';
+import { Provider } from 'react-redux';
+import store from './redux/store/store';
+import Routes from './routes/routes';
 
 ReactDOM.render(
-  <div>{title}</div>,
+  <Provider store={store}>
+    <Routes/>
+  </Provider>,
   document.getElementById('app')
 );
 
