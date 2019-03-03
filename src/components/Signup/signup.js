@@ -39,9 +39,9 @@ export class SignUp extends Component {
             <p>Welcome to your store!</p>
             <div className="">
                 <form className="email-form" onSubmit={this.onSubmit}>
-                    <input onChange={this.onEmailChange} type="email" name='email' placeholder="Email . . ." id="new-email" /><br /><br />
-                    <input onChange={this.onUsernameChange} type="text" name='username' placeholder="Username . . ." id="new-username" /><br /><br />
-                    <input onChange={this.onPasswordChange} type="password" name='password' placeholder="Password . . ." id="new-password" /><br /><br />
+                    <input onChange={this.onEmailChange} type="email" name='email' placeholder="Email . . ." id="new-email" required/><br /><br />
+                    <input onChange={this.onUsernameChange} type="text" name='username' placeholder="Username . . ." id="new-username" required/><br /><br />
+                    <input onChange={this.onPasswordChange} type="password" name='password' placeholder="Password . . ." id="new-password" required/><br /><br />
                     <input type="submit" value="Register" id="submit-btn"/><br /><br />
                 </form>
                 <p>Have an account? <a href="/login">Login</a></p>
