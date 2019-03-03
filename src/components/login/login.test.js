@@ -1,33 +1,23 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 
-import { SignUp } from './signup';
-import { mapStateToProps } from './signup'
+import { Login } from './login';
+import { mapStateToProps } from './login'
 
 describe('App', () => {
 
-    const mockfetchResetPasswordfn = jest.fn();
+    const mockfetchResetPasswordfn = jest.fn()
 
     const props ={
-        fetchSignUp: mockfetchResetPasswordfn,
-        message: 'Registered!',
-        password: {value:''}
+        fetchLogin: mockfetchResetPasswordfn,
+        message: 'Logged in!',
+        password:{value:''}
     }
 
     it('should render without crashing', () => {
-        const wrapper = shallow(<SignUp />);
+        const wrapper = shallow(<Login />);
 
         expect(wrapper).toMatchSnapshot();
-    });
-
-    test('should call onEmailChange', () => {
-        const onEmailChangeMock = jest.fn();
-        const event = {
-        target: { name: 'email', value: 'barnabastb2@gmail.com' }
-        };
-        const component = shallow(<SignUp onChange={onEmailChangeMock} />);
-        component.instance().onEmailChange(event)
-        expect(component.instance().state.email).toEqual('barnabastb2@gmail.com');
     });
 
     test('should call onUsernameChange', () => {
@@ -35,7 +25,7 @@ describe('App', () => {
         const event = {
         target: { name: 'username', value: 'Barnabas' }
         };
-        const component = shallow(<SignUp onChange={onUsernameChangeMock} />);
+        const component = shallow(<Login onChange={onUsernameChangeMock} />);
         component.instance().onUsernameChange(event)
         expect(component.instance().state).toEqual({ username: 'Barnabas'});
     });
@@ -45,26 +35,26 @@ describe('App', () => {
         const event = {
         target: { name: 'password', value: 'Barna1234' }
         };
-        const component = shallow(<SignUp onChange={onPasswordChangeMock} />);
+        const component = shallow(<Login onChange={onPasswordChangeMock} />);
         component.instance().onPasswordChange(event)
         expect(component.instance().state).toEqual({ password: 'Barna1234'});
     });
 
     test('should render a form', () => {
-        const component = shallow(<SignUp/>)
+        const component = shallow(<Login/>)
         expect(component.find('form').length).toEqual(1);
     });
 
     test("should map states to props", () => {
         const mockedState = {
-            signupReducer: {success: false, payload: ''}
+            loginReducer: {success: false, payload: ''}
         }
         const state = mapStateToProps(mockedState);
         expect(state).toEqual({success: false, payload: ''});
     });
 
     test('it should submit', () =>{
-        const component = shallow(<SignUp {...props} />)
+        const component = shallow(<Login {...props} />)
         component.setState({
             success: false,
             payload: ''

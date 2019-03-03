@@ -12,7 +12,7 @@ exports[`App should render without crashing 1`] = `
     </h1>
   </a>
   <p>
-    Welcome to your store!
+    Welcome to your store Please log in!
   </p>
   <div
     className=""
@@ -22,28 +22,21 @@ exports[`App should render without crashing 1`] = `
       onSubmit={[Function]}
     >
       <input
-        id="new-email"
-        name="email"
-        onChange={[Function]}
-        placeholder="Email . . ."
-        type="email"
-      />
-      <br />
-      <br />
-      <input
-        id="new-username"
+        id="username"
         name="username"
         onChange={[Function]}
         placeholder="Username . . ."
+        required={true}
         type="text"
       />
       <br />
       <br />
       <input
-        id="new-password"
+        id="password"
         name="password"
         onChange={[Function]}
         placeholder="Password . . ."
+        required={true}
         type="password"
       />
       <br />
@@ -51,17 +44,17 @@ exports[`App should render without crashing 1`] = `
       <input
         id="submit-btn"
         type="submit"
-        value="Register"
+        value="Log in"
       />
       <br />
       <br />
     </form>
     <p>
-      Have an account? 
+      Don't have an account? 
       <a
-        href="/login"
+        href="/"
       >
-        Login
+        Register
       </a>
     </p>
   </div>

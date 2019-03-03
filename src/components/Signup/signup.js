@@ -44,6 +44,7 @@ export class SignUp extends Component {
                     <input onChange={this.onPasswordChange} type="password" name='password' placeholder="Password . . ." id="new-password" /><br /><br />
                     <input type="submit" value="Register" id="submit-btn"/><br /><br />
                 </form>
+                <p>Have an account? <a href="/login">Login</a></p>
             </div>
         </div>
         )
