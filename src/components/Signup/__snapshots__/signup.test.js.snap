@@ -1,7 +1,61 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App should render without crashing 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<div
+  className=""
+>
+  <a
+    href="/"
+  >
+    <h1>
+      Store Manager
+    </h1>
+  </a>
+  <p>
+    Welcome to your store!
+  </p>
+  <div
+    className=""
+  >
+    <form
+      className="email-form"
+      onSubmit={[Function]}
+    >
+      <input
+        id="new-email"
+        name="email"
+        onChange={[Function]}
+        placeholder="Email . . ."
+        type="email"
+      />
+      <br />
+      <br />
+      <input
+        id="new-username"
+        name="username"
+        onChange={[Function]}
+        placeholder="Username . . ."
+        type="text"
+      />
+      <br />
+      <br />
+      <input
+        id="new-password"
+        name="password"
+        onChange={[Function]}
+        placeholder="Password . . ."
+        type="password"
+      />
+      <br />
+      <br />
+      <input
+        id="submit-btn"
+        type="submit"
+        value="Register"
+      />
+      <br />
+      <br />
+    </form>
+  </div>
+</div>
 `;

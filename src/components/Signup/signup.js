@@ -13,7 +13,6 @@ export class SignUp extends Component {
     onSubmit = (event) => {
         event.preventDefault()
         
-        let slug = this.props.match.params.slug;
         this.props.fetchSignUp(this.state.email, this.state.username, this.state.password)
         
         
