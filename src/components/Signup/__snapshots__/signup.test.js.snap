@@ -26,6 +26,7 @@ exports[`App should render without crashing 1`] = `
         name="email"
         onChange={[Function]}
         placeholder="Email . . ."
+        required={true}
         type="email"
       />
       <br />
@@ -35,6 +36,7 @@ exports[`App should render without crashing 1`] = `
         name="username"
         onChange={[Function]}
         placeholder="Username . . ."
+        required={true}
         type="text"
       />
       <br />
@@ -44,6 +46,7 @@ exports[`App should render without crashing 1`] = `
         name="password"
         onChange={[Function]}
         placeholder="Password . . ."
+        required={true}
         type="password"
       />
       <br />
