@@ -20,7 +20,6 @@ const fetchSignUp = (email, username, password) => (dispatch) => {
                 payload: error.response
             });
             toast.error(error.response.data.message)
-            console.log(error.response);
         });
     
 };
