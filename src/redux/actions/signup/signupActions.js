@@ -17,7 +17,7 @@ const fetchSignUp = (email, username, password) => (dispatch) => {
         .catch((error) => {
             dispatch({
                 type: type.REGISTER_FAILURE,
-                payload: error
+                payload: error.response
             });
             toast.error(error.response.data.message)
         });
